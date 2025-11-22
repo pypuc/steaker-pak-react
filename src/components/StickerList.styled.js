@@ -4,5 +4,5 @@ export const ListWrapper = styled.div`
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 20px; 
 `;
