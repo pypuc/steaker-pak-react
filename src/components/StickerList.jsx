@@ -1,14 +1,18 @@
-import React from "react";
+import stickers from "../stickers.json";
 import Sticker from "./Sticker";
+import { ListWrapper } from "./StickerList.styled";
 
-function StickerList({ stickers, onSelect }) {
+export default function StickerList({ onSelect }) {
   return (
-    <div className="sticker_list">
-      {stickers.map((s, index) => (
-        <Sticker key={index} data={s} onClick={() => onSelect(s.label)} />
+    <ListWrapper>
+      {stickers.map((item) => (
+        <Sticker
+          key={item.label}
+          img={item.img}
+          label={item.label}
+          onClick={onSelect}
+        />
       ))}
-    </div>
+    </ListWrapper>
   );
 }
-
-export default StickerList;
